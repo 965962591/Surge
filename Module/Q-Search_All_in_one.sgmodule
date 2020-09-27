@@ -5,8 +5,7 @@
 
 # Q-Search 
 # Modified by nzw9314
-
-# From Neurogram (https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Q-Search.sgmodule)
+#部分数搜索资源来自：黑洞资源笔记和快搜（thanks）
 
 # - Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
 #  注：先进入设置更改 Safari 默认搜索为 DuckDuckGO
@@ -51,7 +50,7 @@
 # ssp: 少数派
 # tieba: 百度贴吧搜索（tieba 吧名）
 # csdn: CSDN
-#jshu； 简书
+# jshu:简书
 # blog: 博客园搜索
 # yh: 油猴搜索
 
@@ -66,6 +65,7 @@
 # pdd: 拼爹爹
 # gmdq: 国美
 # dd: 当当
+# yj: 宜家
 # mt: 美团
 # elm: 饿了么
 # didi: 滴滴出行
@@ -96,6 +96,7 @@
 # om: ourmacs搜索(mac软件)
 # macw: macw搜索(mac软件)
 # gtop: git:logs(github热门资源搜索)
+# whois: 域名所属查询
 # api:Devdocs开发文档的搜索(eg: api json)
 
 
@@ -115,6 +116,13 @@
 # fts:  findarticles搜索
 # mdv： medrxiv搜索
  
+# 备件价格查询
+#xm:  小米备件查询
+#hw:  华为备件查询
+#op:  oppo备件查询
+#vi:  vivo备件查询
+#plus:一加备件查询
+
  
  
 # bi: 必应
@@ -226,7 +234,7 @@
 # csdn: CSDN
 ^https:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
 
-#jshu: 简书
+# jshu: 简书
 ^https:\/\/duckduckgo.com\/\?q=jshu\+([^&]+).+ https://www.jianshu.com/search?q=$1 302
 
 # blog: 博客园
@@ -282,6 +290,12 @@
 # gtop: git:logs热门项目搜索
 ^https:\/\/duckduckgo.com\/\?q=gtop\+([^&]+).+ https://www.gitlogs.com/most_popular?topic=$1 302
 
+# whois: 域名所属查询
+^https:\/\/duckduckgo.com\/\?q=whois\+([^&]+).+ https://whois.aliyun.com/whois/domain/$1 302
+
+
+
+
 
 #字幕搜索
 
@@ -326,6 +340,9 @@
 
 #dd: 当当
 ^https:\/\/duckduckgo.com\/\?q=dd\+([^&]+).+ http://search.m.dangdang.com/search.php?keyword=$1 302
+
+#yj: 宜家
+^https:\/\/duckduckgo.com\/\?q=yj\+([^&]+).+ https://www.ikea.cn/cn/zh/search/products/?q=$1 302
 
 #mt: 美团
 ^https:\/\/duckduckgo.com\/\?q=mt\+([^&]+).+ https://h5.waimai.meituan.com/waimai/mindex/searchresults?queryType=12002&keyword=$1&entranceId=0&qwTypeId=11002&mode=search 302
@@ -408,6 +425,32 @@
 
 #dl (大力网盘搜索)
 ^https:\/\/duckduckgo.com\/\?q=dl\+([^&]+).+ https://www.dalipan.com/search?keyword=$1 302
+
+
+
+
+#备件
+
+#xm: 小米备件
+^https:\/\/duckduckgo.com\/\?q=xm\+([^&]+).+ https://www.mi.com/service/materialprice/ 302
+
+#hw: 华为备件
+^https:\/\/duckduckgo.com\/\?q=hw\+([^&]+).+ https://consumer.huawei.com/cn/support/sparepart-price/ 302
+
+#oppo: oppo备件
+^https:\/\/duckduckgo.com\/\?q=op\+([^&]+).+ https://support.oppo.com/cn/spare-parts-price/ 302
+
+#vi: vivo备件
+^https:\/\/duckduckgo.com\/\?q=vi\+([^&]+).+ http://www.vivo.com.cn/service/accessory/ 302
+
+#plus: 一加备件
+^https:\/\/duckduckgo.com\/\?q=plus\+([^&]+).+ https://www.oneplus.com/cn/support/repair-pricing/ 302
+
+#jg: 坚果备件
+^https:\/\/duckduckgo.com\/\?q=jg\+([^&]+).+ https://www.smartisan.com/support/#/serviceprice/ 302
+
+
+
 
 
 
