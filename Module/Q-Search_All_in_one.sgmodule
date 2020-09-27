@@ -81,7 +81,6 @@
 # yfs：音范丝搜索
 
 
-
 # api:Devdocs开发文档的搜索(eg: api json)
 # gdb: 古丁堡图书
 # bk: TheFuture图书搜索
@@ -133,6 +132,11 @@
 #ec: epicgame
 #cj: cubejoy(方块游戏平台)
 
+
+#成分分析（为我家宝宝准备的）
+#cdna: cosdna(护肤品成分的作用搜索)
+#cpro: cosdna护肤品(品牌的成分及作用搜索)
+#zyl: 找原料(数据比较全，但是偏向全类型)
 
 
  
@@ -479,6 +483,17 @@
 ^https:\/\/duckduckgo.com\/\?q=cj\+([^&]+).+ https://store.cubejoy.com/html/en/store/searchgoods/websearch.html?search=$1 302
 
 
+
+
+#成分
+#cdna: cosdna护肤品成分搜索
+^https:\/\/duckduckgo.com\/\?q=cdna\+([^&]+).+ https://m.cosdna.com/chs/stuff.php?q=$1 302
+
+#cpro: cosdna护肤品(品牌的成分及作用搜索)
+^https:\/\/duckduckgo.com\/\?q=cpro\+([^&]+).+ https://m.cosdna.com/chs/product.php?q=$1 302
+
+#zyl: zhaoyl(找原料，需要登录，数据全)
+^https:\/\/duckduckgo.com\/\?q=zyl\+([^&]+).+ http://www.zhaoyl.com/material/search.html?q=$1 302
 
 
 
